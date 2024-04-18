@@ -55,7 +55,9 @@ class BakePlugin extends BasePlugin
      */
     public function bootstrap(PluginApplicationInterface $app): void
     {
-        $app->addPlugin('Cake/TwigView');
+        if (!$app->getPlugins()->has('Cake/TwigView')) {
+            $app->addPlugin('Cake/TwigView');
+        }
     }
 
     /**
