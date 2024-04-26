@@ -1,7 +1,7 @@
 /composer.lock
 /phpunit.xml
-/tools
-vendor
+/tools/
+vendor/
 /.idea/
 /.phpunit.cache
 tests/test_app/App/Model/Table/CommentsTable.php
