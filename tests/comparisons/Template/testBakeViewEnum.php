@@ -28,7 +28,7 @@
                 </tr>
                 <tr>
                     <th><?= __('Status') ?></th>
-                    <td><?= $bakeUser->status === null ? '' : $this->Number->format($bakeUser->status) ?></td>
+                    <td><?= $bakeUser->status === null ? '' : h($bakeUser->status->label()) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Created') ?></th>
