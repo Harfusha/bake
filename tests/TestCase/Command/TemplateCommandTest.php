@@ -17,6 +17,7 @@ declare(strict_types=1);
 namespace Bake\Test\TestCase\Command;
 
 use Bake\Command\TemplateCommand;
+use Bake\Test\App\Model\Enum\ArticleStatus;
 use Bake\Test\App\Model\Enum\BakeUserStatus;
 use Bake\Test\App\Model\Table\BakeArticlesTable;
 use Bake\Test\TestCase\TestCase;
@@ -459,8 +460,31 @@ class TemplateCommandTest extends TestCase
      */
     public function testBakeViewEnum()
     {
+        $table = $this->fetchTable('BakeUsers');
+        $table->getSchema()->setColumnType('status', EnumType::from(BakeUserStatus::class));
+
         $this->generatedFile = ROOT . 'templates/BakeUsers/view.php';
         $this->exec('bake template bake_users view');
+
+        $this->assertExitCode(CommandInterface::CODE_SUCCESS);
+        $this->assertFileExists($this->generatedFile);
+
+        $result = file_get_contents($this->generatedFile);
+        $this->assertSameAsFile(__FUNCTION__ . '.php', $result);
+    }
+
+    /**
+     * test baking view with enum class
+     *
+     * @return void
+     */
+    public function testBakeViewEnumNoLabel()
+    {
+        $table = $this->fetchTable('Articles');
+        $table->getSchema()->setColumnType('status', EnumType::from(ArticleStatus::class));
+
+        $this->generatedFile = ROOT . 'templates/Articles/view.php';
+        $this->exec('bake template articles view');
 
         $this->assertExitCode(CommandInterface::CODE_SUCCESS);
         $this->assertFileExists($this->generatedFile);
@@ -576,13 +600,33 @@ class TemplateCommandTest extends TestCase
      *
      * @return void
      */
-    public function testBakeIndexWithEnum()
+    public function testBakeIndexWithEnumWithLabel()
     {
         $table = $this->fetchTable('BakeUsers');
         $table->getSchema()->setColumnType('status', EnumType::from(BakeUserStatus::class));
 
         $this->generatedFile = ROOT . 'templates/BakeUsers/index.php';
         $this->exec('bake template bake_users index');
+
+        $this->assertExitCode(CommandInterface::CODE_SUCCESS);
+        $this->assertFileExists($this->generatedFile);
+
+        $result = file_get_contents($this->generatedFile);
+        $this->assertSameAsFile(__FUNCTION__ . '.php', $result);
+    }
+
+    /**
+     * test bake template with index enum types
+     *
+     * @return void
+     */
+    public function testBakeIndexWithEnumNoLabel()
+    {
+        $table = $this->fetchTable('Articles');
+        $table->getSchema()->setColumnType('status', EnumType::from(ArticleStatus::class));
+
+        $this->generatedFile = ROOT . 'templates/Articles/index.php';
+        $this->exec('bake template articles index');
 
         $this->assertExitCode(CommandInterface::CODE_SUCCESS);
         $this->assertFileExists($this->generatedFile);
