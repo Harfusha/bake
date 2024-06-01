@@ -81,10 +81,11 @@
                 <tr>
                     <th><?= __('{{ field|humanize }}') ?></th>
 {% set columnData = Bake.columnData(field, schema) %}
+{% set supportsLabel = Bake.enumSupportsLabel(field, schema) %}
 {% if columnData.null %}
-                <td><?= ${{ singularVar }}->{{ field }} === null ? '' : h(${{ singularVar }}->{{ field }}->label()) ?></td>
+                    <td><?= ${{ singularVar }}->{{ field }} === null ? '' : h(${{ singularVar }}->{{ field }}->{% if supportsLabel %}label(){% else %}value{% endif %}) ?></td>
 {% else %}
-                <td><?= h(${{ singularVar }}->{{ field }}->label()) ?></td>
+                    <td><?= h(${{ singularVar }}->{{ field }}->{% if supportsLabel %}label(){% else %}value{% endif %}) ?></td>
 {% endif %}
                 </tr>
 {% endfor %}
