@@ -9,6 +9,8 @@ use Brick\VarExporter\VarExporter;
 use Cake\Core\Configure;
 use Cake\Core\ConventionsTrait;
 use Cake\Database\Schema\TableSchema;
+use Cake\Database\Type\EnumType;
+use Cake\Database\TypeFactory;
 use Cake\Datasource\SchemaInterface;
 use Cake\ORM\Table;
 use Cake\Utility\Inflector;
@@ -279,6 +281,26 @@ class BakeHelper extends Helper
     public function columnData(string $field, TableSchema $schema): ?array
     {
         return $schema->getColumn($field);
+    }
+
+    /**
+     * Check if a column is both an enum, and the mapped enum implements `label()` as a method.
+     *
+     * @param string $field the field to check
+     * @param \Cake\Database\Schema\TableSchema $schema The table schema to read from.
+     * @return bool
+     */
+    public function enumSupportsLabel(string $field, TableSchema $schema): bool
+    {
+        $typeName = $schema->getColumnType($field);
+        if (!str_starts_with($typeName, 'enum-')) {
+            return false;
+        }
+        $type = TypeFactory::build($typeName);
+        assert($type instanceof EnumType);
+        $enumClass = $type->getEnumClassName();
+
+        return method_exists($enumClass, 'label');
     }
 
     /**
