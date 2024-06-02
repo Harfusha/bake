@@ -461,6 +461,7 @@ class TemplateCommandTest extends TestCase
     public function testBakeViewEnum()
     {
         $table = $this->fetchTable('BakeUsers');
+        $table->associations()->removeAll();
         $table->getSchema()->setColumnType('status', EnumType::from(BakeUserStatus::class));
 
         $this->generatedFile = ROOT . 'templates/BakeUsers/view.php';
