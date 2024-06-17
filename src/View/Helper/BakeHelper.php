@@ -8,6 +8,7 @@ use Bake\Utility\Model\AssociationFilter;
 use Brick\VarExporter\VarExporter;
 use Cake\Core\Configure;
 use Cake\Core\ConventionsTrait;
+use Cake\Core\Plugin;
 use Cake\Database\Schema\TableSchema;
 use Cake\Database\Type\EnumType;
 use Cake\Database\TypeFactory;
@@ -165,6 +166,16 @@ class BakeHelper extends Helper
             'name' => $name,
             'fullName' => $class,
         ];
+    }
+
+    /**
+     * Check if the current application has a plugin installed
+     *
+     * @param string $plugin The plugin name to check for.
+     */
+    public function hasPlugin(string $plugin): bool
+    {
+        return Plugin::isLoaded($plugin);
     }
 
     /**

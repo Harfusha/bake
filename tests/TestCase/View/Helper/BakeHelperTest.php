@@ -179,4 +179,10 @@ PARSE
             $code
         );
     }
+
+    public function testHasPlugin(): void
+    {
+        $this->assertTrue($this->BakeHelper->hasPlugin('Bake'));
+        $this->assertFalse($this->BakeHelper->hasPlugin('Authentication'));
+    }
 }
