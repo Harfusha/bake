@@ -22,6 +22,9 @@
     public function add()
     {
         ${{ singularName }} = $this->{{ currentModelName }}->newEmptyEntity();
+{% if Bake.hasPlugin('Authorization') %}
+        $this->Authorization->authorize(${{ singularName }});
+{% endif %}
         if ($this->request->is('post')) {
             ${{ singularName }} = $this->{{ currentModelName }}->patchEntity(${{ singularName }}, $this->request->getData());
             if ($this->{{ currentModelName }}->save(${{ singularName }})) {

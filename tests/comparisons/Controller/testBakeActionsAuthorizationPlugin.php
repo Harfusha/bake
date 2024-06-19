@@ -7,9 +7,22 @@ namespace Bake\Test\App\Controller;
  * BakeArticles Controller
  *
  * @property \Bake\Test\App\Model\Table\BakeArticlesTable $BakeArticles
+ * @property \Authorization\Controller\Component\AuthorizationComponent $Authorization
  */
 class BakeArticlesController extends AppController
 {
+    /**
+     * Initialize controller
+     *
+     * @return void
+     */
+    public function initialize(): void
+    {
+        parent::initialize();
+
+        $this->loadComponent('Authorization.Authorization');
+    }
+
     /**
      * Index method
      *
@@ -19,6 +32,7 @@ class BakeArticlesController extends AppController
     {
         $query = $this->BakeArticles->find()
             ->contain(['BakeUsers']);
+        $query = $this->Authorization->applyScope($query);
         $bakeArticles = $this->paginate($query);
 
         $this->set(compact('bakeArticles'));
@@ -34,6 +48,7 @@ class BakeArticlesController extends AppController
     public function view($id = null)
     {
         $bakeArticle = $this->BakeArticles->get($id, contain: ['BakeUsers', 'BakeTags', 'BakeComments']);
+        $this->Authorization->authorize($bakeArticle);
         $this->set(compact('bakeArticle'));
     }
 
@@ -45,6 +60,7 @@ class BakeArticlesController extends AppController
     public function add()
     {
         $bakeArticle = $this->BakeArticles->newEmptyEntity();
+        $this->Authorization->authorize($bakeArticle);
         if ($this->request->is('post')) {
             $bakeArticle = $this->BakeArticles->patchEntity($bakeArticle, $this->request->getData());
             if ($this->BakeArticles->save($bakeArticle)) {
@@ -69,6 +85,7 @@ class BakeArticlesController extends AppController
     public function edit($id = null)
     {
         $bakeArticle = $this->BakeArticles->get($id, contain: ['BakeTags']);
+        $this->Authorization->authorize($bakeArticle);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $bakeArticle = $this->BakeArticles->patchEntity($bakeArticle, $this->request->getData());
             if ($this->BakeArticles->save($bakeArticle)) {
@@ -94,6 +111,7 @@ class BakeArticlesController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $bakeArticle = $this->BakeArticles->get($id);
+        $this->Authorization->authorize($bakeArticle);
         if ($this->BakeArticles->delete($bakeArticle)) {
             $this->Flash->success(__('The bake article has been deleted.'));
         } else {
