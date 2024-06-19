@@ -213,8 +213,8 @@ class ControllerCommandTest extends TestCase
     }
 
     /**
- * Test the integration with Authorization plugin
- */
+     * Test the integration with Authorization plugin
+     */
     public function testBakeActionsAuthorizationPlugin()
     {
         $this->_loadTestPlugin('Authorization');
@@ -222,7 +222,7 @@ class ControllerCommandTest extends TestCase
         $this->generatedFile = APP . 'Controller/BakeArticlesController.php';
         $this->exec('bake controller --connection test --no-test BakeArticles');
 
-        $this->assertExitCode(CommandInterface::CODE_SUCCESS);
+        $this->assertExitSuccess();
         $result = file_get_contents($this->generatedFile);
         $this->assertSameAsFile(__FUNCTION__ . '.php', $result);
     }
