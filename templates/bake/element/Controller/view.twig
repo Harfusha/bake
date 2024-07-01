@@ -27,5 +27,8 @@
     public function view($id = null)
     {
         ${{ singularName }} = $this->{{ currentModelName }}->get($id, contain: {{ Bake.exportArray(allAssociations)|raw }});
+{% if Bake.hasPlugin('Authorization') %}
+        $this->Authorization->authorize(${{ singularName }});
+{% endif %}
         $this->set(compact('{{ singularName }}'));
     }

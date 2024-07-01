@@ -66,7 +66,7 @@ class ControllerCommandTest extends TestCase
         parent::tearDown();
         $this->getTableLocator()->clear();
 
-        $this->removePlugins(['ControllerTest', 'Company/Pastry']);
+        $this->removePlugins(['ControllerTest', 'Company/Pastry', 'Authorization', 'BakeTest']);
     }
 
     /**
@@ -100,6 +100,25 @@ class ControllerCommandTest extends TestCase
         $args = new Arguments([], ['components' => '  , Auth, ,  RequestHandler'], []);
         $result = $command->getComponents($args);
         $this->assertSame(['Auth', 'RequestHandler'], $result);
+    }
+
+    /**
+     * test component generation with auto-detect for core plugins
+     *
+     * @return void
+     */
+    public function testGetComponentsInferredDefaults()
+    {
+        $this->_loadTestPlugin('Authorization');
+
+        $command = new ControllerCommand();
+        $args = new Arguments([], [], []);
+        $result = $command->getComponents($args);
+        $this->assertSame(['Authorization.Authorization'], $result);
+
+        $args = new Arguments([], ['components' => 'Flash, FormProtection'], []);
+        $result = $command->getComponents($args);
+        $this->assertSame(['Flash', 'FormProtection'], $result);
     }
 
     /**
@@ -189,6 +208,21 @@ class ControllerCommandTest extends TestCase
         );
 
         $this->assertExitCode(CommandInterface::CODE_SUCCESS);
+        $result = file_get_contents($this->generatedFile);
+        $this->assertSameAsFile(__FUNCTION__ . '.php', $result);
+    }
+
+    /**
+     * Test the integration with Authorization plugin
+     */
+    public function testBakeActionsAuthorizationPlugin()
+    {
+        $this->_loadTestPlugin('Authorization');
+
+        $this->generatedFile = APP . 'Controller/BakeArticlesController.php';
+        $this->exec('bake controller --connection test --no-test BakeArticles');
+
+        $this->assertExitSuccess();
         $result = file_get_contents($this->generatedFile);
         $this->assertSameAsFile(__FUNCTION__ . '.php', $result);
     }

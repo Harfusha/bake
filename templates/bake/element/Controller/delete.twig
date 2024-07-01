@@ -24,6 +24,9 @@
     {
         $this->request->allowMethod(['post', 'delete']);
         ${{ singularName }} = $this->{{ currentModelName }}->get($id);
+{% if Bake.hasPlugin('Authorization') %}
+        $this->Authorization->authorize(${{ singularName }});
+{% endif %}
         if ($this->{{ currentModelName }}->delete(${{ singularName }})) {
             $this->Flash->success(__('The {{ singularHumanName|lower }} has been deleted.'));
         } else {
