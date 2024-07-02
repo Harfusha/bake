@@ -23,6 +23,7 @@ use Cake\Core\BasePlugin;
 use Cake\Core\Configure;
 use Cake\Core\Plugin;
 use Cake\Core\PluginApplicationInterface;
+use Cake\Http\BaseApplication;
 use DirectoryIterator;
 use ReflectionClass;
 use ReflectionException;
@@ -55,7 +56,11 @@ class BakePlugin extends BasePlugin
      */
     public function bootstrap(PluginApplicationInterface $app): void
     {
-        $app->addPlugin('Cake/TwigView');
+        assert($app instanceof BaseApplication);
+
+        if (!$app->getPlugins()->has('Cake/TwigView')) {
+            $app->addPlugin('Cake/TwigView');
+        }
     }
 
     /**
