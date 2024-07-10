@@ -87,6 +87,9 @@ class ControllerCommand extends BakeCommand
             $actions = array_map('trim', explode(',', $args->getOption('actions')));
             $actions = array_filter($actions);
         }
+        if (!$args->getOption('actions') && Plugin::isLoaded('Authentication') && $controllerName === 'Users') {
+            $actions[] = 'login';
+        }
 
         $helpers = $this->getHelpers($args);
         $components = $this->getComponents($args);
