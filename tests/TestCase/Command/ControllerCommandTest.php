@@ -38,6 +38,7 @@ class ControllerCommandTest extends TestCase
         'plugin.Bake.BakeArticlesBakeTags',
         'plugin.Bake.BakeComments',
         'plugin.Bake.BakeTags',
+        'plugin.Bake.Users',
     ];
 
     /**
@@ -225,6 +226,28 @@ class ControllerCommandTest extends TestCase
         $this->assertExitSuccess();
         $result = file_get_contents($this->generatedFile);
         $this->assertSameAsFile(__FUNCTION__ . '.php', $result);
+    }
+
+    /**
+     * Test the integration with Authentication plugin
+     */
+    public function testBakeActionsAuthenticationPlugin()
+    {
+        $this->_loadTestPlugin('Authentication');
+
+        $generatedFile = APP . 'Controller/UsersController.php';
+        $exists = file_exists($generatedFile);
+        if ($exists) {
+            rename($generatedFile, $generatedFile . '.tmp');
+        }
+        $this->exec('bake controller --connection test --no-test Users');
+
+        $this->assertExitSuccess();
+        $result = file_get_contents($generatedFile);
+        $this->assertSameAsFile(__FUNCTION__ . '.php', $result);
+        if ($exists) {
+            rename($generatedFile . '.tmp', $generatedFile);
+        }
     }
 
     /**
