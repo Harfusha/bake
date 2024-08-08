@@ -3,8 +3,9 @@ includes:
 
 parameters:
     level: 6
-    checkMissingIterableValueType: false
     paths:
         - src/
     bootstrapFiles:
         - tests/bootstrap.php
+    ignoreErrors:
+        - identifier: missingType.iterableValue
