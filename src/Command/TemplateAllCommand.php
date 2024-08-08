@@ -66,7 +66,13 @@ class TemplateAllCommand extends BakeCommand
         $scanner = new TableScanner($connection);
 
         foreach ($scanner->listUnskipped() as $table) {
-            $templateArgs = new Arguments([$table], $args->getOptions(), ['name']);
+            $parser = $this->templateCommand->getOptionParser();
+            $templateArgs = new Arguments(
+                [$table],
+                $args->getOptions(),
+                $parser->argumentNames()
+            );
+
             $this->templateCommand->execute($templateArgs, $io);
         }
 

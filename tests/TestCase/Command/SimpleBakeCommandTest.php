@@ -19,6 +19,7 @@ namespace Bake\Test\TestCase\Command;
 use Bake\Test\TestCase\TestCase;
 use Cake\Console\CommandInterface;
 use Cake\Core\Plugin;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 /**
  * SimpleBakeCommandTest class
@@ -148,6 +149,7 @@ class SimpleBakeCommandTest extends TestCase
      * @dataProvider subclassProvider
      * @return void
      */
+    #[DataProvider('subclassProvider')]
     public function testImplementations($class)
     {
         $task = new $class();

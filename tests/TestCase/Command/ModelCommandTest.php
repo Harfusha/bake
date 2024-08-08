@@ -31,6 +31,7 @@ use Cake\Database\Driver\Postgres;
 use Cake\Database\Driver\Sqlite;
 use Cake\Database\Driver\Sqlserver;
 use Cake\Datasource\ConnectionManager;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 /**
  * ModelCommand test class
@@ -1971,8 +1972,13 @@ class ModelCommandTest extends TestCase
     public function testBakeEntityWithPropertyTypeHints()
     {
         $model = $this->getTableLocator()->get('TodoItems');
+        $model->associations()->removeAll();
+
         $model->belongsTo('Users');
+        $model->hasOne('TodoReminders');
         $model->hasMany('BakeTest.TodoTasks');
+        $model->hasMany('TodoLabels');
+
         $model->getSchema()->addColumn('array_type', [
             'type' => 'array',
         ]);
@@ -2383,9 +2389,9 @@ PARSE;
     /**
      * test that execute passes with different inflections of the same name.
      *
-     * @dataProvider nameVariations
      * @return void
      */
+    #[DataProvider('nameVariations')]
     public function testMainWithNamedModelVariations($name)
     {
         $this->generatedFiles = [

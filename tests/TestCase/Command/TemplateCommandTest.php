@@ -29,6 +29,7 @@ use Cake\Core\Configure;
 use Cake\Core\Plugin;
 use Cake\Database\Type\EnumType;
 use Cake\View\Exception\MissingTemplateException;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 /**
  * TemplateCommand test
@@ -106,9 +107,9 @@ class TemplateCommandTest extends TestCase
      * Test the controller() method.
      *
      * @param string $name
-     * @dataProvider nameVariations
      * @return void
      */
+    #[DataProvider('nameVariations')]
     public function testControllerVariations($name)
     {
         $command = new TemplateCommand();
@@ -482,7 +483,7 @@ class TemplateCommandTest extends TestCase
     public function testBakeViewEnumNoLabel()
     {
         $table = $this->fetchTable('Articles');
-        $table->getSchema()->setColumnType('status', EnumType::from(ArticleStatus::class));
+        $table->getSchema()->setColumnType('published', EnumType::from(ArticleStatus::class));
 
         $this->generatedFile = ROOT . 'templates/Articles/view.php';
         $this->exec('bake template articles view');
@@ -624,7 +625,7 @@ class TemplateCommandTest extends TestCase
     public function testBakeIndexWithEnumNoLabel()
     {
         $table = $this->fetchTable('Articles');
-        $table->getSchema()->setColumnType('status', EnumType::from(ArticleStatus::class));
+        $table->getSchema()->setColumnType('published', EnumType::from(ArticleStatus::class));
 
         $this->generatedFile = ROOT . 'templates/Articles/index.php';
         $this->exec('bake template articles index');

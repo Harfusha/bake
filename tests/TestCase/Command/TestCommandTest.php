@@ -24,6 +24,7 @@ use Bake\Test\TestCase\TestCase;
 use Cake\Console\CommandInterface;
 use Cake\Core\Plugin;
 use Cake\Http\ServerRequest as Request;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 /**
  * TestCommandTest class
@@ -291,9 +292,9 @@ class TestCommandTest extends TestCase
     /**
      * test that resolving class names works
      *
-     * @dataProvider realClassProvider
      * @return void
      */
+    #[DataProvider('realClassProvider')]
     public function testGetRealClassname($type, $name, $expected)
     {
         $this->setAppNamespace('App');
@@ -659,9 +660,9 @@ class TestCommandTest extends TestCase
     /**
      * Test filename generation for each type + plugins
      *
-     * @dataProvider caseFileNameProvider
      * @return void
      */
+    #[DataProvider('caseFileNameProvider')]
     public function testTestCaseFileName($type, $class, $expected)
     {
         $this->setAppNamespace('App');
@@ -712,9 +713,9 @@ class TestCommandTest extends TestCase
     /**
      * Test that mapType returns the correct package names.
      *
-     * @dataProvider mapTypeProvider
      * @return void
      */
+    #[DataProvider('mapTypeProvider')]
     public function testMapType($original, $expected)
     {
         $command = new TestCommand();

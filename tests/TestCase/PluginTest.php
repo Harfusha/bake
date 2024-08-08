@@ -18,6 +18,7 @@ namespace Bake\Test\TestCase;
 
 use Bake\BakePlugin;
 use Cake\Console\CommandCollection;
+use Cake\Core\Plugin;
 use Cake\Routing\RouteBuilder;
 use Cake\Routing\RouteCollection;
 
@@ -44,6 +45,7 @@ class PluginTest extends TestCase
 
     public function testConsoleDiscoverBakeCommands()
     {
+        Plugin::getCollection()->add(new BakePlugin());
         $commands = new CommandCollection();
         $plugin = new BakePlugin();
         $commands = $plugin->console($commands);

@@ -72,7 +72,7 @@ class TemplateRendererTest extends TestCase
      */
     public function testGenerateWithTemplateOverride()
     {
-        $this->_loadTestPlugin('TestBakeTheme');
+        $this->_loadTestPlugin('TestBakeTheme', true);
         $renderer = new TemplateRenderer('TestBakeTheme');
         $renderer->set([
             'plugin' => 'Special',
@@ -89,7 +89,7 @@ class TemplateRendererTest extends TestCase
      */
     public function testGenerateWithTemplateFallbacks()
     {
-        $this->_loadTestPlugin('TestBakeTheme');
+        $this->_loadTestPlugin('TestBakeTheme', true);
         $renderer = new TemplateRenderer('TestBakeTheme');
         $renderer->set([
             'name' => 'Articles',

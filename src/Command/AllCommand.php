@@ -111,7 +111,8 @@ class AllCommand extends BakeCommand
             }
 
             foreach ($tables as $table) {
-                $subArgs = new Arguments([$table], $options, ['name']);
+                $parser = $command->getOptionParser();
+                $subArgs = new Arguments([$table], $options, $parser->argumentNames());
                 $command->execute($subArgs, $io);
             }
         }
