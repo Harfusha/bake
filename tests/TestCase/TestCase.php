@@ -67,18 +67,25 @@ abstract class TestCase extends BaseTestCase
      * Load a plugin from the tests folder, and add to the autoloader
      *
      * @param string $name plugin name to load
+     * @param bool $loadBake Whether or not to load the Bake plugin as well.
      * @return void
      */
-    protected function _loadTestPlugin($name)
+    protected function _loadTestPlugin(string $name, bool $loadBake = false): void
     {
         $root = dirname(dirname(__FILE__)) . DS;
         $path = $root . 'test_app' . DS . 'Plugin' . DS . $name . DS;
 
-        $this->loadPlugins([
+        $plugins = [
             $name => [
                 'path' => $path,
             ],
-        ]);
+        ];
+
+        if ($loadBake) {
+            $plugins[] = 'Bake';
+        }
+
+        $this->loadPlugins($plugins);
     }
 
     /**

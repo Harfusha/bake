@@ -22,6 +22,7 @@ use Bake\Test\TestCase\TestCase;
 use Cake\Console\Arguments;
 use Cake\Console\CommandInterface;
 use Cake\Core\Plugin;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 /**
  * ControllerCommand Test
@@ -380,9 +381,9 @@ class ControllerCommandTest extends TestCase
     /**
      * test that both plural and singular forms work for controller baking.
      *
-     * @dataProvider nameVariations
      * @return void
      */
+    #[DataProvider('nameVariations')]
     public function testMainWithControllerNameVariations($name)
     {
         $this->generatedFile = APP . 'Controller/BakeArticlesController.php';

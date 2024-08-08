@@ -26,12 +26,12 @@ use Cake\ORM\Association\BelongsToMany;
 use Cake\ORM\Association\HasMany;
 use Cake\ORM\Association\HasOne;
 use Cake\TestSuite\TestCase;
+use PHPUnit\Framework\Attributes\CoversClass;
 
 /**
  * DocBlockHelper Test
- *
- * @coversDefaultClass \Bake\View\Helper\DocBlockHelper
  */
+#[CoversClass(DocBlockHelper::class)]
 class DocBlockHelperTest extends TestCase
 {
     /**
@@ -74,7 +74,6 @@ class DocBlockHelperTest extends TestCase
      * Tests the classDescription method including annotation spacing
      *
      * @return void
-     * @covers ::classDescription
      */
     public function testClassDescription()
     {
@@ -94,7 +93,6 @@ class DocBlockHelperTest extends TestCase
      * Tests the associatedEntityTypeToHintType method
      *
      * @return void
-     * @covers ::associatedEntityTypeToHintType
      */
     public function testAssociatedEntityTypeToHintType()
     {
@@ -198,8 +196,6 @@ class DocBlockHelperTest extends TestCase
      * Tests the buildEntityAssociationHintTypeMap method
      *
      * @return void
-     * @covers ::buildEntityAssociationHintTypeMap
-     * @covers ::_insertAfter
      */
     public function testBuildEntityAssociationHintTypeMap()
     {
@@ -210,7 +206,6 @@ class DocBlockHelperTest extends TestCase
      * Tests the columnTypeToHintType method
      *
      * @return void
-     * @covers ::columnTypeToHintType
      */
     public function testColumnTypeToHintType()
     {
@@ -221,7 +216,6 @@ class DocBlockHelperTest extends TestCase
      * Tests the propertyHints method
      *
      * @return void
-     * @covers ::propertyHints
      */
     public function testPropertyHints()
     {
@@ -232,7 +226,6 @@ class DocBlockHelperTest extends TestCase
      * Tests the buildTableAnnotations method
      *
      * @return void
-     * @covers ::buildTableAnnotations
      */
     public function testBuildTableAnnotations()
     {
