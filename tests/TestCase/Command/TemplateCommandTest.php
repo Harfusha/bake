@@ -443,6 +443,11 @@ class TemplateCommandTest extends TestCase
      */
     public function testBakeView()
     {
+        if (version_compare(Configure::version(), '4.5.0', '<')) {
+            $this->markTestSkipped(
+                'CakePHP versions older than 4.5.0 will generate `$author->profile->nick` instead of `$author->profile->id`'
+            );
+        }
         $this->generatedFile = ROOT . 'templates/Authors/view.php';
         $this->exec('bake template authors view');
 
