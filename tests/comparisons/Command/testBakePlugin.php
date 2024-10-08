@@ -14,6 +14,16 @@ use Cake\Console\ConsoleOptionParser;
 class ExampleCommand extends Command
 {
     /**
+     * Get the command description.
+     *
+     * @return string
+     */
+    public static function getDescription(): string
+    {
+        return 'Command description here.';
+    }
+
+    /**
      * Hook method for defining this command's option parser.
      *
      * @see https://book.cakephp.org/5/en/console-commands/commands.html#defining-arguments-and-options
@@ -22,9 +32,8 @@ class ExampleCommand extends Command
      */
     public function buildOptionParser(ConsoleOptionParser $parser): ConsoleOptionParser
     {
-        $parser = parent::buildOptionParser($parser);
-
-        return $parser;
+        return parent::buildOptionParser($parser)
+            ->setDescription(static::getDescription());
     }
 
     /**
