@@ -295,18 +295,18 @@ class DocBlockHelper extends Helper
 
         // phpcs:disable
         $annotations[] = "@method $entityPath newEmptyEntity()";
-        $annotations[] = "@method $entityPath newEntity(array \$data, array \$options = [])";
-        $annotations[] = "@method array<$entityPath> newEntities(array \$data, array \$options = [])";
-        $annotations[] = "@method $entityPath get(mixed \$primaryKey, array|string \$finder = 'all', \\Psr\\SimpleCache\\CacheInterface|string|null \$cache = null, \Closure|string|null \$cacheKey = null, mixed ...\$args)";
-        $annotations[] = "@method $entityPath findOrCreate(\$search, ?callable \$callback = null, array \$options = [])";
-        $annotations[] = "@method $entityPath patchEntity($entityPath \$entity, array \$data, array \$options = [])";
-        $annotations[] = "@method array<$entityPath> patchEntities(iterable<$entityPath> \$entities, array \$data, array \$options = [])";
-        $annotations[] = "@method $entityPath|false save($entityPath \$entity, array \$options = [])";
-        $annotations[] = "@method $entityPath saveOrFail($entityPath \$entity, array \$options = [])";
-        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath>|false saveMany(iterable<$entityPath> \$entities, array \$options = [])";
-        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath> saveManyOrFail(iterable<$entityPath> \$entities, array \$options = [])";
-        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath>|false deleteMany(iterable<$entityPath> \$entities, array \$options = [])";
-        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath> deleteManyOrFail(iterable<$entityPath> \$entities, array \$options = [])";
+        $annotations[] = "@method $entityPath newEntity(array<mixed> \$data, array<string, mixed> \$options = [])";
+        $annotations[] = "@method array<$entityPath> newEntities(array<mixed> \$data, array<string, mixed> \$options = [])";
+        $annotations[] = "@method $entityPath get(mixed \$primaryKey, array<mixed>|string \$finder = 'all', \\Psr\\SimpleCache\\CacheInterface|string|null \$cache = null, \Closure|string|null \$cacheKey = null, mixed ...\$args)";
+        $annotations[] = "@method $entityPath findOrCreate(\$search, ?callable \$callback = null, array<string, mixed> \$options = [])";
+        $annotations[] = "@method $entityPath patchEntity(\\Cake\\Datasource\\EntityInterface \$entity, array<mixed> \$data, array<string, mixed> \$options = [])";
+        $annotations[] = "@method array<$entityPath> patchEntities(iterable<\\Cake\\Datasource\\EntityInterface> \$entities, array<mixed> \$data, array<string, mixed> \$options = [])";
+        $annotations[] = "@method $entityPath|false save(\\Cake\\Datasource\\EntityInterface \$entity, array<string, mixed> \$options = [])";
+        $annotations[] = "@method $entityPath saveOrFail(\\Cake\\Datasource\\EntityInterface \$entity, array<string, mixed> \$options = [])";
+        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath>|false saveMany(iterable<\\Cake\\Datasource\\EntityInterface> \$entities, array<string, mixed> \$options = [])";
+        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath> saveManyOrFail(iterable<\\Cake\\Datasource\\EntityInterface> \$entities, array<string, mixed> \$options = [])";
+        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath>|false deleteMany(iterable<\\Cake\\Datasource\\EntityInterface> \$entities, array<string, mixed> \$options = [])";
+        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath> deleteManyOrFail(iterable<\\Cake\\Datasource\\EntityInterface> \$entities, array<string, mixed> \$options = [])";
         // phpcs:enable
         foreach ($behaviors as $behavior => $behaviorData) {
             $className = App::className($behavior, 'Model/Behavior', 'Behavior');

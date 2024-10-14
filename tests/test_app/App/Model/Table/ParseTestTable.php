@@ -12,18 +12,18 @@ use Cake\Validation\Validator;
  * ParseTestTable Model
  *
  * @method \Bake\Test\App\Model\Entity\ParseTestTable newEmptyEntity()
- * @method \Bake\Test\App\Model\Entity\ParseTestTable newEntity(array $data, array $options = [])
- * @method array<\Bake\Test\App\Model\Entity\ParseTestTable> newEntities(array $data, array $options = [])
+ * @method \Bake\Test\App\Model\Entity\ParseTestTable newEntity(array<mixed> $data, array<string, mixed> $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\ParseTestTable> newEntities(array<mixed> $data, array<string, mixed> $options = [])
  * @method \Bake\Test\App\Model\Entity\ParseTestTable get($primaryKey, array $options = [])
  * @method \Bake\Test\App\Model\Entity\ParseTestTable findOrCreate($search, ?callable $callback = null, array $options = [])
  * @method \Bake\Test\App\Model\Entity\ParseTestTable patchEntity(\Bake\Test\App\Model\Entity\ParseTestTable $entity, array $data, array $options = [])
- * @method array<\Bake\Test\App\Model\Entity\ParseTestTable> patchEntities(iterable<\Bake\Test\App\Model\Entity\ParseTestTable> $entities, array $data, array $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\ParseTestTable> patchEntities(iterable<\Cake\Datasource\EntityInterface> $entities, array $data, array $options = [])
  * @method \Bake\Test\App\Model\Entity\ParseTestTable|false save(\Bake\Test\App\Model\Entity\ParseTestTable $entity, array $options = [])
  * @method \Bake\Test\App\Model\Entity\ParseTestTable saveOrFail(\Bake\Test\App\Model\Entity\ParseTestTable $entity, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable>|false saveMany(iterable<\Bake\Test\App\Model\Entity\ParseTestTable> $entities, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable> saveManyOrFail(iterable<\Bake\Test\App\Model\Entity\ParseTestTable> $entities, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable>|false deleteMany(iterable<\Bake\Test\App\Model\Entity\ParseTestTable> $entities, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable> deleteManyOrFail(iterable<\Bake\Test\App\Model\Entity\ParseTestTable> $entities, array $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable>|false saveMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable> saveManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable>|false deleteMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable> deleteManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
  */
 class ParseTestTable extends Table
 {

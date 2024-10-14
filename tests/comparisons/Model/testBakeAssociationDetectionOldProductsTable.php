@@ -12,18 +12,18 @@ use Cake\Validation\Validator;
  * OldProducts Model
  *
  * @method \Bake\Test\App\Model\Entity\OldProduct newEmptyEntity()
- * @method \Bake\Test\App\Model\Entity\OldProduct newEntity(array $data, array $options = [])
- * @method array<\Bake\Test\App\Model\Entity\OldProduct> newEntities(array $data, array $options = [])
- * @method \Bake\Test\App\Model\Entity\OldProduct get(mixed $primaryKey, array|string $finder = 'all', \Psr\SimpleCache\CacheInterface|string|null $cache = null, \Closure|string|null $cacheKey = null, mixed ...$args)
- * @method \Bake\Test\App\Model\Entity\OldProduct findOrCreate($search, ?callable $callback = null, array $options = [])
- * @method \Bake\Test\App\Model\Entity\OldProduct patchEntity(\Bake\Test\App\Model\Entity\OldProduct $entity, array $data, array $options = [])
- * @method array<\Bake\Test\App\Model\Entity\OldProduct> patchEntities(iterable<\Bake\Test\App\Model\Entity\OldProduct> $entities, array $data, array $options = [])
- * @method \Bake\Test\App\Model\Entity\OldProduct|false save(\Bake\Test\App\Model\Entity\OldProduct $entity, array $options = [])
- * @method \Bake\Test\App\Model\Entity\OldProduct saveOrFail(\Bake\Test\App\Model\Entity\OldProduct $entity, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct>|false saveMany(iterable<\Bake\Test\App\Model\Entity\OldProduct> $entities, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct> saveManyOrFail(iterable<\Bake\Test\App\Model\Entity\OldProduct> $entities, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct>|false deleteMany(iterable<\Bake\Test\App\Model\Entity\OldProduct> $entities, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct> deleteManyOrFail(iterable<\Bake\Test\App\Model\Entity\OldProduct> $entities, array $options = [])
+ * @method \Bake\Test\App\Model\Entity\OldProduct newEntity(array<mixed> $data, array<string, mixed> $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\OldProduct> newEntities(array<mixed> $data, array<string, mixed> $options = [])
+ * @method \Bake\Test\App\Model\Entity\OldProduct get(mixed $primaryKey, array<mixed>|string $finder = 'all', \Psr\SimpleCache\CacheInterface|string|null $cache = null, \Closure|string|null $cacheKey = null, mixed ...$args)
+ * @method \Bake\Test\App\Model\Entity\OldProduct findOrCreate($search, ?callable $callback = null, array<string, mixed> $options = [])
+ * @method \Bake\Test\App\Model\Entity\OldProduct patchEntity(\Cake\Datasource\EntityInterface $entity, array<mixed> $data, array<string, mixed> $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\OldProduct> patchEntities(iterable<\Cake\Datasource\EntityInterface> $entities, array<mixed> $data, array<string, mixed> $options = [])
+ * @method \Bake\Test\App\Model\Entity\OldProduct|false save(\Cake\Datasource\EntityInterface $entity, array<string, mixed> $options = [])
+ * @method \Bake\Test\App\Model\Entity\OldProduct saveOrFail(\Cake\Datasource\EntityInterface $entity, array<string, mixed> $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct>|false saveMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct> saveManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct>|false deleteMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct> deleteManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
