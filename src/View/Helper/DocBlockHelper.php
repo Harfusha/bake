@@ -297,7 +297,7 @@ class DocBlockHelper extends Helper
         $annotations[] = "@method $entityPath newEmptyEntity()";
         $annotations[] = "@method $entityPath newEntity(array<mixed> \$data, array<string, mixed> \$options = [])";
         $annotations[] = "@method array<$entityPath> newEntities(array<mixed> \$data, array<string, mixed> \$options = [])";
-        $annotations[] = "@method $entityPath get(mixed \$primaryKey, array<mixed>|string \$finder = 'all', \\Psr\\SimpleCache\\CacheInterface|string|null \$cache = null, \Closure|string|null \$cacheKey = null, mixed ...\$args)";
+        $annotations[] = "@method $entityPath get(mixed \$primaryKey, string \$finder = 'all', \\Psr\\SimpleCache\\CacheInterface|string|null \$cache = null, \Closure|string|null \$cacheKey = null, mixed ...\$args)";
         $annotations[] = "@method $entityPath findOrCreate(\$search, ?callable \$callback = null, array<string, mixed> \$options = [])";
         $annotations[] = "@method $entityPath patchEntity(\\Cake\\Datasource\\EntityInterface \$entity, array<mixed> \$data, array<string, mixed> \$options = [])";
         $annotations[] = "@method array<$entityPath> patchEntities(iterable<\\Cake\\Datasource\\EntityInterface> \$entities, array<mixed> \$data, array<string, mixed> \$options = [])";

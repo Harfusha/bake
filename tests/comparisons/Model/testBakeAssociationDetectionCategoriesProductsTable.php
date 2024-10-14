@@ -17,7 +17,7 @@ use Cake\Validation\Validator;
  * @method \Bake\Test\App\Model\Entity\CategoriesProduct newEmptyEntity()
  * @method \Bake\Test\App\Model\Entity\CategoriesProduct newEntity(array<mixed> $data, array<string, mixed> $options = [])
  * @method array<\Bake\Test\App\Model\Entity\CategoriesProduct> newEntities(array<mixed> $data, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\CategoriesProduct get(mixed $primaryKey, array<mixed>|string $finder = 'all', \Psr\SimpleCache\CacheInterface|string|null $cache = null, \Closure|string|null $cacheKey = null, mixed ...$args)
+ * @method \Bake\Test\App\Model\Entity\CategoriesProduct get(mixed $primaryKey, string $finder = 'all', \Psr\SimpleCache\CacheInterface|string|null $cache = null, \Closure|string|null $cacheKey = null, mixed ...$args)
  * @method \Bake\Test\App\Model\Entity\CategoriesProduct findOrCreate($search, ?callable $callback = null, array<string, mixed> $options = [])
  * @method \Bake\Test\App\Model\Entity\CategoriesProduct patchEntity(\Cake\Datasource\EntityInterface $entity, array<mixed> $data, array<string, mixed> $options = [])
  * @method array<\Bake\Test\App\Model\Entity\CategoriesProduct> patchEntities(iterable<\Cake\Datasource\EntityInterface> $entities, array<mixed> $data, array<string, mixed> $options = [])

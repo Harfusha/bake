@@ -17,7 +17,7 @@ use Cake\Validation\Validator;
  * @method \BakeTest\Model\Entity\User newEmptyEntity()
  * @method \BakeTest\Model\Entity\User newEntity(array<mixed> $data, array<string, mixed> $options = [])
  * @method array<\BakeTest\Model\Entity\User> newEntities(array<mixed> $data, array<string, mixed> $options = [])
- * @method \BakeTest\Model\Entity\User get(mixed $primaryKey, array<mixed>|string $finder = 'all', \Psr\SimpleCache\CacheInterface|string|null $cache = null, \Closure|string|null $cacheKey = null, mixed ...$args)
+ * @method \BakeTest\Model\Entity\User get(mixed $primaryKey, string $finder = 'all', \Psr\SimpleCache\CacheInterface|string|null $cache = null, \Closure|string|null $cacheKey = null, mixed ...$args)
  * @method \BakeTest\Model\Entity\User findOrCreate($search, ?callable $callback = null, array<string, mixed> $options = [])
  * @method \BakeTest\Model\Entity\User patchEntity(\Cake\Datasource\EntityInterface $entity, array<mixed> $data, array<string, mixed> $options = [])
  * @method array<\BakeTest\Model\Entity\User> patchEntities(iterable<\Cake\Datasource\EntityInterface> $entities, array<mixed> $data, array<string, mixed> $options = [])
