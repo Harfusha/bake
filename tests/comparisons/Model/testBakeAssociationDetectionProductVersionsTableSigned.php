@@ -18,14 +18,14 @@ use Cake\Validation\Validator;
  * @method array<\Bake\Test\App\Model\Entity\ProductVersion> newEntities(array $data, array $options = [])
  * @method \Bake\Test\App\Model\Entity\ProductVersion get(mixed $primaryKey, array|string $finder = 'all', \Psr\SimpleCache\CacheInterface|string|null $cache = null, \Closure|string|null $cacheKey = null, mixed ...$args)
  * @method \Bake\Test\App\Model\Entity\ProductVersion findOrCreate($search, ?callable $callback = null, array $options = [])
- * @method \Bake\Test\App\Model\Entity\ProductVersion patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method array<\Bake\Test\App\Model\Entity\ProductVersion> patchEntities(iterable $entities, array $data, array $options = [])
- * @method \Bake\Test\App\Model\Entity\ProductVersion|false save(\Cake\Datasource\EntityInterface $entity, array $options = [])
- * @method \Bake\Test\App\Model\Entity\ProductVersion saveOrFail(\Cake\Datasource\EntityInterface $entity, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion>|false saveMany(iterable $entities, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion> saveManyOrFail(iterable $entities, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion>|false deleteMany(iterable $entities, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion> deleteManyOrFail(iterable $entities, array $options = [])
+ * @method \Bake\Test\App\Model\Entity\ProductVersion patchEntity(\Bake\Test\App\Model\Entity\ProductVersion $entity, array $data, array $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\ProductVersion> patchEntities(iterable<\Bake\Test\App\Model\Entity\ProductVersion> $entities, array $data, array $options = [])
+ * @method \Bake\Test\App\Model\Entity\ProductVersion|false save(\Bake\Test\App\Model\Entity\ProductVersion $entity, array $options = [])
+ * @method \Bake\Test\App\Model\Entity\ProductVersion saveOrFail(\Bake\Test\App\Model\Entity\ProductVersion $entity, array $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion>|false saveMany(iterable<\Bake\Test\App\Model\Entity\ProductVersion> $entities, array $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion> saveManyOrFail(iterable<\Bake\Test\App\Model\Entity\ProductVersion> $entities, array $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion>|false deleteMany(iterable<\Bake\Test\App\Model\Entity\ProductVersion> $entities, array $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion> deleteManyOrFail(iterable<\Bake\Test\App\Model\Entity\ProductVersion> $entities, array $options = [])
  */
 class ProductVersionsTable extends Table
 {

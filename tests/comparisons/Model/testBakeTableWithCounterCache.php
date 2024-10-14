@@ -18,14 +18,14 @@ use Cake\Validation\Validator;
  * @method array<\Bake\Test\App\Model\Entity\TodoTask> newEntities(array $data, array $options = [])
  * @method \Bake\Test\App\Model\Entity\TodoTask get(mixed $primaryKey, array|string $finder = 'all', \Psr\SimpleCache\CacheInterface|string|null $cache = null, \Closure|string|null $cacheKey = null, mixed ...$args)
  * @method \Bake\Test\App\Model\Entity\TodoTask findOrCreate($search, ?callable $callback = null, array $options = [])
- * @method \Bake\Test\App\Model\Entity\TodoTask patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method array<\Bake\Test\App\Model\Entity\TodoTask> patchEntities(iterable $entities, array $data, array $options = [])
- * @method \Bake\Test\App\Model\Entity\TodoTask|false save(\Cake\Datasource\EntityInterface $entity, array $options = [])
- * @method \Bake\Test\App\Model\Entity\TodoTask saveOrFail(\Cake\Datasource\EntityInterface $entity, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\TodoTask>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoTask>|false saveMany(iterable $entities, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\TodoTask>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoTask> saveManyOrFail(iterable $entities, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\TodoTask>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoTask>|false deleteMany(iterable $entities, array $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\TodoTask>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoTask> deleteManyOrFail(iterable $entities, array $options = [])
+ * @method \Bake\Test\App\Model\Entity\TodoTask patchEntity(\Bake\Test\App\Model\Entity\TodoTask $entity, array $data, array $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\TodoTask> patchEntities(iterable<\Bake\Test\App\Model\Entity\TodoTask> $entities, array $data, array $options = [])
+ * @method \Bake\Test\App\Model\Entity\TodoTask|false save(\Bake\Test\App\Model\Entity\TodoTask $entity, array $options = [])
+ * @method \Bake\Test\App\Model\Entity\TodoTask saveOrFail(\Bake\Test\App\Model\Entity\TodoTask $entity, array $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\TodoTask>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoTask>|false saveMany(iterable<\Bake\Test\App\Model\Entity\TodoTask> $entities, array $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\TodoTask>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoTask> saveManyOrFail(iterable<\Bake\Test\App\Model\Entity\TodoTask> $entities, array $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\TodoTask>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoTask>|false deleteMany(iterable<\Bake\Test\App\Model\Entity\TodoTask> $entities, array $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\TodoTask>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoTask> deleteManyOrFail(iterable<\Bake\Test\App\Model\Entity\TodoTask> $entities, array $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  * @mixin \Cake\ORM\Behavior\CounterCacheBehavior
