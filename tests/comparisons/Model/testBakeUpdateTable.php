@@ -19,18 +19,18 @@ use RuntimeException as CustomException;
  * @property \Bake\Test\App\Model\Table\TodoLabelsTable&\Cake\ORM\Association\BelongsToMany $TodoLabels
  *
  * @method \Bake\Test\App\Model\Entity\TodoItem newEmptyEntity()
- * @method \Bake\Test\App\Model\Entity\TodoItem newEntity(array<mixed> $data, array<string, mixed> $options = [])
- * @method array<\Bake\Test\App\Model\Entity\TodoItem> newEntities(array<mixed> $data, array<string, mixed> $options = [])
+ * @method \Bake\Test\App\Model\Entity\TodoItem newEntity(mixed[] $data, mixed[] $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\TodoItem> newEntities(mixed[] $data, mixed[] $options = [])
  * @method \Bake\Test\App\Model\Entity\TodoItem get(mixed $primaryKey, string $finder = 'all', \Psr\SimpleCache\CacheInterface|string|null $cache = null, \Closure|string|null $cacheKey = null, mixed ...$args)
- * @method \Bake\Test\App\Model\Entity\TodoItem findOrCreate($search, ?callable $callback = null, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\TodoItem patchEntity(\Cake\Datasource\EntityInterface $entity, array<mixed> $data, array<string, mixed> $options = [])
- * @method array<\Bake\Test\App\Model\Entity\TodoItem> patchEntities(iterable<\Cake\Datasource\EntityInterface> $entities, array<mixed> $data, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\TodoItem|false save(\Cake\Datasource\EntityInterface $entity, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\TodoItem saveOrFail(\Cake\Datasource\EntityInterface $entity, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\TodoItem>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoItem>|false saveMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\TodoItem>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoItem> saveManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\TodoItem>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoItem>|false deleteMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\TodoItem>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoItem> deleteManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
+ * @method \Bake\Test\App\Model\Entity\TodoItem findOrCreate($search, ?callable $callback = null, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\TodoItem patchEntity(\Cake\Datasource\EntityInterface $entity, mixed[] $data, mixed[] $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\TodoItem> patchEntities(iterable $entities, mixed[] $data, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\TodoItem|false save(\Cake\Datasource\EntityInterface $entity, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\TodoItem saveOrFail(\Cake\Datasource\EntityInterface $entity, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\TodoItem>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoItem>|false saveMany(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\TodoItem>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoItem> saveManyOrFail(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\TodoItem>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoItem>|false deleteMany(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\TodoItem>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TodoItem> deleteManyOrFail(iterable $entities, mixed[] $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */

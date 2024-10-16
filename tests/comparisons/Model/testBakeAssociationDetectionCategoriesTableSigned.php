@@ -14,18 +14,18 @@ use Cake\Validation\Validator;
  * @property \Bake\Test\App\Model\Table\ProductsTable&\Cake\ORM\Association\BelongsToMany $Products
  *
  * @method \Bake\Test\App\Model\Entity\Category newEmptyEntity()
- * @method \Bake\Test\App\Model\Entity\Category newEntity(array<mixed> $data, array<string, mixed> $options = [])
- * @method array<\Bake\Test\App\Model\Entity\Category> newEntities(array<mixed> $data, array<string, mixed> $options = [])
+ * @method \Bake\Test\App\Model\Entity\Category newEntity(mixed[] $data, mixed[] $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\Category> newEntities(mixed[] $data, mixed[] $options = [])
  * @method \Bake\Test\App\Model\Entity\Category get(mixed $primaryKey, string $finder = 'all', \Psr\SimpleCache\CacheInterface|string|null $cache = null, \Closure|string|null $cacheKey = null, mixed ...$args)
- * @method \Bake\Test\App\Model\Entity\Category findOrCreate($search, ?callable $callback = null, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\Category patchEntity(\Cake\Datasource\EntityInterface $entity, array<mixed> $data, array<string, mixed> $options = [])
- * @method array<\Bake\Test\App\Model\Entity\Category> patchEntities(iterable<\Cake\Datasource\EntityInterface> $entities, array<mixed> $data, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\Category|false save(\Cake\Datasource\EntityInterface $entity, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\Category saveOrFail(\Cake\Datasource\EntityInterface $entity, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\Category>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\Category>|false saveMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\Category>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\Category> saveManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\Category>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\Category>|false deleteMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\Category>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\Category> deleteManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
+ * @method \Bake\Test\App\Model\Entity\Category findOrCreate($search, ?callable $callback = null, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\Category patchEntity(\Cake\Datasource\EntityInterface $entity, mixed[] $data, mixed[] $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\Category> patchEntities(iterable $entities, mixed[] $data, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\Category|false save(\Cake\Datasource\EntityInterface $entity, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\Category saveOrFail(\Cake\Datasource\EntityInterface $entity, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\Category>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\Category>|false saveMany(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\Category>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\Category> saveManyOrFail(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\Category>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\Category>|false deleteMany(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\Category>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\Category> deleteManyOrFail(iterable $entities, mixed[] $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */

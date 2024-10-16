@@ -14,18 +14,18 @@ use Cake\Validation\Validator;
  * @property \Bake\Test\App\Model\Table\ProductsTable&\Cake\ORM\Association\BelongsTo $Products
  *
  * @method \Bake\Test\App\Model\Entity\ProductVersion newEmptyEntity()
- * @method \Bake\Test\App\Model\Entity\ProductVersion newEntity(array<mixed> $data, array<string, mixed> $options = [])
- * @method array<\Bake\Test\App\Model\Entity\ProductVersion> newEntities(array<mixed> $data, array<string, mixed> $options = [])
+ * @method \Bake\Test\App\Model\Entity\ProductVersion newEntity(mixed[] $data, mixed[] $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\ProductVersion> newEntities(mixed[] $data, mixed[] $options = [])
  * @method \Bake\Test\App\Model\Entity\ProductVersion get(mixed $primaryKey, string $finder = 'all', \Psr\SimpleCache\CacheInterface|string|null $cache = null, \Closure|string|null $cacheKey = null, mixed ...$args)
- * @method \Bake\Test\App\Model\Entity\ProductVersion findOrCreate($search, ?callable $callback = null, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\ProductVersion patchEntity(\Cake\Datasource\EntityInterface $entity, array<mixed> $data, array<string, mixed> $options = [])
- * @method array<\Bake\Test\App\Model\Entity\ProductVersion> patchEntities(iterable<\Cake\Datasource\EntityInterface> $entities, array<mixed> $data, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\ProductVersion|false save(\Cake\Datasource\EntityInterface $entity, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\ProductVersion saveOrFail(\Cake\Datasource\EntityInterface $entity, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion>|false saveMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion> saveManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion>|false deleteMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion> deleteManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
+ * @method \Bake\Test\App\Model\Entity\ProductVersion findOrCreate($search, ?callable $callback = null, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\ProductVersion patchEntity(\Cake\Datasource\EntityInterface $entity, mixed[] $data, mixed[] $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\ProductVersion> patchEntities(iterable $entities, mixed[] $data, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\ProductVersion|false save(\Cake\Datasource\EntityInterface $entity, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\ProductVersion saveOrFail(\Cake\Datasource\EntityInterface $entity, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion>|false saveMany(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion> saveManyOrFail(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion>|false deleteMany(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ProductVersion>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ProductVersion> deleteManyOrFail(iterable $entities, mixed[] $options = [])
  */
 class ProductVersionsTable extends Table
 {

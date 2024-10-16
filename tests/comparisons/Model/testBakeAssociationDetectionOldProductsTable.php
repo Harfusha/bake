@@ -12,18 +12,18 @@ use Cake\Validation\Validator;
  * OldProducts Model
  *
  * @method \Bake\Test\App\Model\Entity\OldProduct newEmptyEntity()
- * @method \Bake\Test\App\Model\Entity\OldProduct newEntity(array<mixed> $data, array<string, mixed> $options = [])
- * @method array<\Bake\Test\App\Model\Entity\OldProduct> newEntities(array<mixed> $data, array<string, mixed> $options = [])
+ * @method \Bake\Test\App\Model\Entity\OldProduct newEntity(mixed[] $data, mixed[] $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\OldProduct> newEntities(mixed[] $data, mixed[] $options = [])
  * @method \Bake\Test\App\Model\Entity\OldProduct get(mixed $primaryKey, string $finder = 'all', \Psr\SimpleCache\CacheInterface|string|null $cache = null, \Closure|string|null $cacheKey = null, mixed ...$args)
- * @method \Bake\Test\App\Model\Entity\OldProduct findOrCreate($search, ?callable $callback = null, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\OldProduct patchEntity(\Cake\Datasource\EntityInterface $entity, array<mixed> $data, array<string, mixed> $options = [])
- * @method array<\Bake\Test\App\Model\Entity\OldProduct> patchEntities(iterable<\Cake\Datasource\EntityInterface> $entities, array<mixed> $data, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\OldProduct|false save(\Cake\Datasource\EntityInterface $entity, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\OldProduct saveOrFail(\Cake\Datasource\EntityInterface $entity, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct>|false saveMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct> saveManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct>|false deleteMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct> deleteManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
+ * @method \Bake\Test\App\Model\Entity\OldProduct findOrCreate($search, ?callable $callback = null, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\OldProduct patchEntity(\Cake\Datasource\EntityInterface $entity, mixed[] $data, mixed[] $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\OldProduct> patchEntities(iterable $entities, mixed[] $data, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\OldProduct|false save(\Cake\Datasource\EntityInterface $entity, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\OldProduct saveOrFail(\Cake\Datasource\EntityInterface $entity, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct>|false saveMany(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct> saveManyOrFail(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct>|false deleteMany(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\OldProduct>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\OldProduct> deleteManyOrFail(iterable $entities, mixed[] $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */

@@ -12,18 +12,18 @@ use Cake\Validation\Validator;
  * TestBakeArticles Model
  *
  * @method \Bake\Test\App\Model\Entity\TestBakeArticle newEmptyEntity()
- * @method \Bake\Test\App\Model\Entity\TestBakeArticle newEntity(array<mixed> $data, array<string, mixed> $options = [])
- * @method array<\Bake\Test\App\Model\Entity\TestBakeArticle> newEntities(array<mixed> $data, array<string, mixed> $options = [])
+ * @method \Bake\Test\App\Model\Entity\TestBakeArticle newEntity(mixed[] $data, mixed[] $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\TestBakeArticle> newEntities(mixed[] $data, mixed[] $options = [])
  * @method \Bake\Test\App\Model\Entity\TestBakeArticle get(mixed $primaryKey, string $finder = 'all', \Psr\SimpleCache\CacheInterface|string|null $cache = null, \Closure|string|null $cacheKey = null, mixed ...$args)
- * @method \Bake\Test\App\Model\Entity\TestBakeArticle findOrCreate($search, ?callable $callback = null, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\TestBakeArticle patchEntity(\Cake\Datasource\EntityInterface $entity, array<mixed> $data, array<string, mixed> $options = [])
- * @method array<\Bake\Test\App\Model\Entity\TestBakeArticle> patchEntities(iterable<\Cake\Datasource\EntityInterface> $entities, array<mixed> $data, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\TestBakeArticle|false save(\Cake\Datasource\EntityInterface $entity, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\TestBakeArticle saveOrFail(\Cake\Datasource\EntityInterface $entity, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\TestBakeArticle>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TestBakeArticle>|false saveMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\TestBakeArticle>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TestBakeArticle> saveManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\TestBakeArticle>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TestBakeArticle>|false deleteMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\TestBakeArticle>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TestBakeArticle> deleteManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
+ * @method \Bake\Test\App\Model\Entity\TestBakeArticle findOrCreate($search, ?callable $callback = null, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\TestBakeArticle patchEntity(\Cake\Datasource\EntityInterface $entity, mixed[] $data, mixed[] $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\TestBakeArticle> patchEntities(iterable $entities, mixed[] $data, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\TestBakeArticle|false save(\Cake\Datasource\EntityInterface $entity, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\TestBakeArticle saveOrFail(\Cake\Datasource\EntityInterface $entity, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\TestBakeArticle>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TestBakeArticle>|false saveMany(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\TestBakeArticle>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TestBakeArticle> saveManyOrFail(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\TestBakeArticle>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TestBakeArticle>|false deleteMany(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\TestBakeArticle>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\TestBakeArticle> deleteManyOrFail(iterable $entities, mixed[] $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */

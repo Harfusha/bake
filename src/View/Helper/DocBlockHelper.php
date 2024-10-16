@@ -295,18 +295,18 @@ class DocBlockHelper extends Helper
 
         // phpcs:disable
         $annotations[] = "@method $entityPath newEmptyEntity()";
-        $annotations[] = "@method $entityPath newEntity(array<mixed> \$data, array<string, mixed> \$options = [])";
-        $annotations[] = "@method array<$entityPath> newEntities(array<mixed> \$data, array<string, mixed> \$options = [])";
+        $annotations[] = "@method $entityPath newEntity(mixed[] \$data, mixed[] \$options = [])";
+        $annotations[] = "@method array<$entityPath> newEntities(mixed[] \$data, mixed[] \$options = [])";
         $annotations[] = "@method $entityPath get(mixed \$primaryKey, string \$finder = 'all', \\Psr\\SimpleCache\\CacheInterface|string|null \$cache = null, \Closure|string|null \$cacheKey = null, mixed ...\$args)";
-        $annotations[] = "@method $entityPath findOrCreate(\$search, ?callable \$callback = null, array<string, mixed> \$options = [])";
-        $annotations[] = "@method $entityPath patchEntity(\\Cake\\Datasource\\EntityInterface \$entity, array<mixed> \$data, array<string, mixed> \$options = [])";
-        $annotations[] = "@method array<$entityPath> patchEntities(iterable<\\Cake\\Datasource\\EntityInterface> \$entities, array<mixed> \$data, array<string, mixed> \$options = [])";
-        $annotations[] = "@method $entityPath|false save(\\Cake\\Datasource\\EntityInterface \$entity, array<string, mixed> \$options = [])";
-        $annotations[] = "@method $entityPath saveOrFail(\\Cake\\Datasource\\EntityInterface \$entity, array<string, mixed> \$options = [])";
-        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath>|false saveMany(iterable<\\Cake\\Datasource\\EntityInterface> \$entities, array<string, mixed> \$options = [])";
-        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath> saveManyOrFail(iterable<\\Cake\\Datasource\\EntityInterface> \$entities, array<string, mixed> \$options = [])";
-        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath>|false deleteMany(iterable<\\Cake\\Datasource\\EntityInterface> \$entities, array<string, mixed> \$options = [])";
-        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath> deleteManyOrFail(iterable<\\Cake\\Datasource\\EntityInterface> \$entities, array<string, mixed> \$options = [])";
+        $annotations[] = "@method $entityPath findOrCreate(\$search, ?callable \$callback = null, mixed[] \$options = [])";
+        $annotations[] = "@method $entityPath patchEntity(\\Cake\\Datasource\\EntityInterface \$entity, mixed[] \$data, mixed[] \$options = [])";
+        $annotations[] = "@method array<$entityPath> patchEntities(iterable \$entities, mixed[] \$data, mixed[] \$options = [])";
+        $annotations[] = "@method $entityPath|false save(\\Cake\\Datasource\\EntityInterface \$entity, mixed[] \$options = [])";
+        $annotations[] = "@method $entityPath saveOrFail(\\Cake\\Datasource\\EntityInterface \$entity, mixed[] \$options = [])";
+        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath>|false saveMany(iterable \$entities, mixed[] \$options = [])";
+        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath> saveManyOrFail(iterable \$entities, mixed[] \$options = [])";
+        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath>|false deleteMany(iterable \$entities, mixed[] \$options = [])";
+        $annotations[] = "@method iterable<$entityPath>|\Cake\Datasource\ResultSetInterface<$entityPath> deleteManyOrFail(iterable \$entities, mixed[] \$options = [])";
         // phpcs:enable
         foreach ($behaviors as $behavior => $behaviorData) {
             $className = App::className($behavior, 'Model/Behavior', 'Behavior');

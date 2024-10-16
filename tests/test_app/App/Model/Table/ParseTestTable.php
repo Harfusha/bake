@@ -12,18 +12,18 @@ use Cake\Validation\Validator;
  * ParseTestTable Model
  *
  * @method \Bake\Test\App\Model\Entity\ParseTestTable newEmptyEntity()
- * @method \Bake\Test\App\Model\Entity\ParseTestTable newEntity(array<mixed> $data, array<string, mixed> $options = [])
- * @method array<\Bake\Test\App\Model\Entity\ParseTestTable> newEntities(array<mixed> $data, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\ParseTestTable get($primaryKey, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\ParseTestTable findOrCreate($search, ?callable $callback = null, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\ParseTestTable patchEntity(\Cake\Datasource\EntityInterface $entity, array<mixed> $data, array<string, mixed> $options = [])
- * @method array<\Bake\Test\App\Model\Entity\ParseTestTable> patchEntities(iterable<\Cake\Datasource\EntityInterface> $entities, array<mixed> $data, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\ParseTestTable|false save(\Cake\Datasource\EntityInterface $entity, array<string, mixed> $options = [])
- * @method \Bake\Test\App\Model\Entity\ParseTestTable saveOrFail(\Cake\Datasource\EntityInterface $entity, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable>|false saveMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable> saveManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable>|false deleteMany(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
- * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable> deleteManyOrFail(iterable<\Cake\Datasource\EntityInterface> $entities, array<string, mixed> $options = [])
+ * @method \Bake\Test\App\Model\Entity\ParseTestTable newEntity(mixed[] $data, mixed[] $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\ParseTestTable> newEntities(mixed[] $data, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\ParseTestTable get($primaryKey, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\ParseTestTable findOrCreate($search, ?callable $callback = null, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\ParseTestTable patchEntity(\Cake\Datasource\EntityInterface $entity, mixed[] $data, mixed[] $options = [])
+ * @method array<\Bake\Test\App\Model\Entity\ParseTestTable> patchEntities(iterable $entities, mixed[] $data, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\ParseTestTable|false save(\Cake\Datasource\EntityInterface $entity, mixed[] $options = [])
+ * @method \Bake\Test\App\Model\Entity\ParseTestTable saveOrFail(\Cake\Datasource\EntityInterface $entity, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable>|false saveMany(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable> saveManyOrFail(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable>|false deleteMany(iterable $entities, mixed[] $options = [])
+ * @method iterable<\Bake\Test\App\Model\Entity\ParseTestTable>|\Cake\Datasource\ResultSetInterface<\Bake\Test\App\Model\Entity\ParseTestTable> deleteManyOrFail(iterable $entities, mixed[] $options = [])
  */
 class ParseTestTable extends Table
 {
